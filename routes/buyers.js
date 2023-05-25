@@ -9,20 +9,44 @@ const express = require('express');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('users');
+  res.render('buyers');
 });
 
 
-//login users
+//login buyers
 app.get('/login/:id', (req, res) => {
   // using encrypted cookies
-  req.session.user_id = req.params.id;
+  req.session.buyer_id = req.params.id;
 
   // or using plain-text cookies
-  res.cookie('user_id', req.params.id);
+  res.cookie('buyer_id', req.params.id);
 
   // send the user somewhere
   res.redirect('/');
+});
+
+// get a certain buyer profile
+app.get('buyers/:id', (req, res) => {
+  if (!req.session.buyer_id) {
+    return res.status(400).send("You are not logged in");
+  };
+
+
+});
+
+// edit a buyer profile
+app.post('buyers/:id/edit', (req, res) => {
+
+});
+
+// add a buyer profile (sign up)
+app.post('buyers', (req, res) => {
+
+});
+
+// delete a buyer profile
+app.post('buyers/:id/delete', (req, res) => {
+
 });
 
 module.exports = router;
