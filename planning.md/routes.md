@@ -3,7 +3,7 @@
 
 
 R GET /buyers/:id
-E POST /buyers/:id
+E POST /buyers/:id/edit
 A POST /buyers
 D POST /buyers/:id/delete
 
