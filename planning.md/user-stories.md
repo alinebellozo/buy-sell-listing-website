@@ -9,8 +9,8 @@
 * As a seller, I can send the buyer a message, because I would like to inform the user/answer questions about the mug.
 
 ### Pick out the nouns
--buyers (PK id, name, email, phone number, city, province, country, postal code)
--sellers (PK id, name, email, phone number, city , province, country, postal code)
--orders (buyer_id, seller_id, mug_id, total_price, total_quantity)
+-buyers (PK id, name, email, password, phone number, city, province, country, post_code)
+-sellers (PK id, name, email, password, phone number, city , province, country, post_code)
+-orders (buyer_id, seller_id, mug_id, total_price, total_quantity, purchase_date)
 -favourites (PK id, FK mug_id, buyer_id)
--mugs (PK id, FK seller_id, price, name, quantity)
+-mugs (PK id, FK seller_id, price, name, quantity, in_stock)
