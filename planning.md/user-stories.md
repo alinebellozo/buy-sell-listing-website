@@ -11,6 +11,6 @@
 ### Pick out the nouns
 -buyers (PK id, name, email, phone number, city, province, country, postal code)
 -sellers (PK id, name, email, phone number, city , province, country, postal code)
--orders (buyer_id, seller_id, mug_id, price, quantity)
+-orders (buyer_id, seller_id, mug_id, total_price, total_quantity)
 -favourites (PK id, FK mug_id, buyer_id)
 -mugs (PK id, FK seller_id, price, name, quantity)

@@ -1,7 +1,7 @@
 ### Routes to interact with resources
 ### Browse Read Edit Add Delete
 
-B GET /buyers
+
 R GET /buyers/:id
 E POST /buyers/:id
 A POST /buyers
