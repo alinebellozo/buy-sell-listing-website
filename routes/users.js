@@ -56,7 +56,7 @@ router.get('/buyers/:id', (req, res) => {
 
 });
 
-// edit a buyer profile
+// edit a buyer profiles
 router.post('/buyers/:id/edit', (req, res) => {
   if (!req.session.buyer_id) {
     return res.status(400).send("You are not logged in");
