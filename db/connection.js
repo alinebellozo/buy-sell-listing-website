@@ -76,7 +76,12 @@ const getSellerWithEmail = function(email) {
 };
 
 const getAllFavourites = function() {
-
+  const queryString = `SELECT id, seller_id, price, name, quantity, in_stock
+  FROM mugs
+  WHERE favourites[item] = mugs`
+  const favourites = []
+  //need help implementing func
+  
   return pool
     .query(queryString, values)
     .then((res) => res.rows)
@@ -84,6 +89,10 @@ const getAllFavourites = function() {
 };
 
 const getAllSoldItems = function() {
+  const queryString = `SELECT id, seller_id, price, name, quantity, in_stock
+  FROM mugs
+  WHERE SOLD has mugs_id`;
+  //need help implementing func
 
   return pool.query().then((res) => {
     console.log(res.rows);
@@ -92,6 +101,8 @@ const getAllSoldItems = function() {
 };
 
 const getAllOrders = function() {
+  const queryString = `SELECT buyer_id, seller_id, mugs_id, total_price, total_quantity, purchase_date
+  FROM orders`;
 
   return pool
     .query(queryString, values)
@@ -100,6 +111,8 @@ const getAllOrders = function() {
 };
 
 const getAllMugs = function() {
+  const queryString = `SELECT id, seller_id, price, name, quantity, in_stock
+  FROM mugs`;
 
   return pool
     .query(queryString, values)
@@ -108,6 +121,9 @@ const getAllMugs = function() {
 };
 
 const filterByPriceASC = function() {
+  const queryString = `SELECT * mugs
+  FROM mugs
+  ORDER BY price ASC;`;
 
   return pool
     .query(queryString, values)
@@ -116,6 +132,9 @@ const filterByPriceASC = function() {
 };
 
 const filterByPriceDESC = function() {
+  const queryString = `SELECT * mugs
+  FROM mugs
+  ORDER BY price DESC;`;
 
   return pool
     .query(queryString, values)
