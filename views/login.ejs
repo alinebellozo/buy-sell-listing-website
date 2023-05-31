@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,15 @@
   </head>
 
   <body>
-      <h1 class="login" style="padding: .4em;">Login</h1>
-      <form class="login__form" action="/login" method="POST" style="margin-left: 1.2em;">
-        <label class="login__email" for="email">Email:</label>
-        <input type="email" name="email" id="email" style="width: 300px; margin: 1em" />
-        <label class="login__password" for="password">Password:</label>
-        <input type="password" name="password" id="password" style="width: 300px; margin: 1em" />
-        <button class="login__button" type="submit" class="btn btn-outline-primary">Login</button>
-      </form>
+    <h1 class="login">Login</h1>
+
+    <form class="login__form" action="/login" method="POST">
+      <label class="login__email" for="email">Email:</label>
+      <input class="login__email-input" type="email" name="email" id="email" />
+      <label class="login__password" for="password">Password:</label>
+      <input class="login__password-input" type="password" name="password" id="password" />
+      <button class="login__button" type="submit">Login</button>
+    </form>
   </body>
+
 </html>

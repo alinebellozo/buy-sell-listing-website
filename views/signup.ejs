@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,21 @@
     <%- include('footer') %>
     <title>Mug-nificent</title>
   </head>
+
   <body>
 
-      <h1 class="signup">Create an Account</h1>
+    <h1 class="signup">Create an Account</h1>
 
-      <form class="signup__form" action="/signup" method="POST">
-        <div class="signup__">
-          <label class="signup__email" for="email">Email:</label>
-          <input type="email" name="email" id="email" style="width: 300px; margin: 1em" />
-          <label class="signup__password" for="password">Password:</label>
-          <input type="password" name="password" id="password" style="width: 300px; margin: 1em" />
-        </div>
-        <button class="signup__button" type="submit">Sign up</button>
-      </form>
+    <form class="signup__form" action="/signup" method="POST">
+      <div class="signup__">
+        <label class="signup__email" for="email">Email:</label>
+        <input class="signup__email-input" type="email" name="email" id="email" />
+        <label class="signup__password" for="password">Password:</label>
+        <input class="signup__password-input" type="password" name="password" id="password" />
+      </div>
+      <button class="signup__button" type="submit">Sign up</button>
+    </form>
 
   </body>
+
 </html>
