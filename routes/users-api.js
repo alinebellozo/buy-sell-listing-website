@@ -38,7 +38,15 @@ router.post("/", (req, res) => {
     .catch((e) => res.send(e));
 });
 
-// Log a user in
+// Fake a user login
+  router.get("/login/:id", (req, res) => {
+    // using encrypted cookies
+    req.session.buyer_id = req.params.id;
+
+    // send the user somewhere
+    res.redirect("/");
+  });
+
 router.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
