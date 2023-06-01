@@ -1,35 +1,29 @@
 const db = require('../connection');
 
-const getAllMugs = function() {
-  const queryString = `SELECT id, seller_id, price, name, quantity, in_stock
-  FROM mugs`;
-
-  return pool
-    .query(queryString, values)
-    .then((res) => res.rows)
-    .catch((err) => err);
+const getAllMugs = () => {
+  return db.query(`SELECT id, seller_id, price, name, quantity, in_stock
+  FROM mugs;`)
+    .then(data => {
+      return data.rows;
+    });
 };
 
-const filterByPriceASC = function() {
-  const queryString = `SELECT * mugs
+const filterByPriceASC = () => {
+  return db.query(`SELECT * mugs
   FROM mugs
-  ORDER BY price ASC;`;
-
-  return pool
-    .query(queryString, values)
-    .then((res) => res.rows)
-    .catch((err) => err);
+  ORDER BY price ASC;`)
+    .then(data => {
+      return data.rows;
+    });
 };
 
-const filterByPriceDESC = function() {
-  const queryString = `SELECT * mugs
+const filterByPriceDESC = () => {
+  return db.query(`SELECT * mugs
   FROM mugs
-  ORDER BY price DESC;`;
-
-  return pool
-    .query(queryString, values)
-    .then((res) => res.rows)
-    .catch((err) => err);
+  ORDER BY price DESC;`)
+    .then(data => {
+      return data.rows;
+    });
 };
 
 module.exports = { getAllMugs, filterByPriceASC, filterByPriceDESC };

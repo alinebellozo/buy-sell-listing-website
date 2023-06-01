@@ -1,8 +1,10 @@
--- Drop and recreate Widgets table (Example)
+DROP TABLE IF EXISTS mugs CASCADE;
 
-DROP TABLE IF EXISTS widgets CASCADE;
-CREATE TABLE widgets (
+CREATE TABLE mugs (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER REFERENCES users(id),
-  name VARCHAR(255) NOT NULL
+  seller_id INTEGER REFERENCES sellers(id) ON DELETE CASCADE,
+  price INTEGER  NOT NULL DEFAULT 0,
+  name VARCHAR(255) NOT NULL,
+  quantity INTEGER  NOT NULL DEFAULT 0,
+  in_stock BOOLEAN DEFAULT TRUE
 );
