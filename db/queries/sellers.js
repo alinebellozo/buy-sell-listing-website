@@ -1,10 +1,10 @@
 const db = require('../connection');
 
-const getUsers = () => {
-  return db.query('SELECT * FROM users;')
+const getSellerById = (id) => {
+  return db.query('SELECT * FROM sellers WHERE id = $1;', [id])
     .then(data => {
-      return data.rows;
+      return data.rows[0];
     });
 };
 
-module.exports = { getUsers };
+module.exports = { getSellerById };
