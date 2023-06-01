@@ -13,7 +13,7 @@ const getMugById = (id) => {
 };
 
 const getAllMugs = () => {
-  return db.query(`SELECT id, seller_id, price, name, quantity, in_stock
+  return db.query(`SELECT *
   FROM mugs;`)
     .then(data => {
       return data.rows;

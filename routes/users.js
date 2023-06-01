@@ -10,17 +10,16 @@ const router  = express.Router();
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const { getUserWithId } = require("../db/queries/users");
+
 //const { users, widgets } = require("../db/seeds");
 //const users = require("../db/seeds/01_users.sql");
 //const widgets = require("../db/seeds/05_widgets.sql");
 //const { getUserByEmail} = require("./helpers");
 
 // middleware
-
 router.use(express.urlencoded({ extended: true }));
 router.use(cookieParser());
 
-// routes
 
 router.get('/', (req, res) => {
   res.send('hello');
@@ -36,12 +35,12 @@ router.get('/login/:id', (req, res) => {
   res.redirect('/');
 });
 
+
 // get a certain user profile
 router.get('/:id', (req, res) => {
   /*if (!req.session.user_id) {
     return res.status(400).send("You don't have an account, please sign up first");
   };*/
-
 getUserWithId(req.params.id)
 .then((user) => {
   const templateVars = {
@@ -51,6 +50,9 @@ getUserWithId(req.params.id)
   res.render("user", templateVars)
  })
 });
+
+
+
 
 // edit a user profiles
 router.post('/:id/edit', (req, res) => {
