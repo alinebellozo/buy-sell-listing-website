@@ -1,1 +1,62 @@
-@use "../colors" as *;
+@use "../fonts" as *;
+
+.footer {
+
+  width: 100vw;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  // &__contact-title {
+
+  // }
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__icon-img {
+    width: 1.125rem;
+    height: auto;
+  }
+
+  // &__email {
+
+  // }
+
+  // &__phone {
+
+  // }
+
+  // &__logo {
+
+  // }
+
+  &__logo-image {
+    width: 200px;
+    height: auto;
+  }
+
+  // &__follow {
+
+  // }
+
+  // &__social-media {
+
+  // }
+
+  &__instagram {
+    text-decoration: none;
+  }
+
+  &__twitter {
+    text-decoration: none;
+  }
+
+  &__facebook {
+    text-decoration: none;
+  }
+}
