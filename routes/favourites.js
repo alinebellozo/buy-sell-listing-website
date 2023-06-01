@@ -17,7 +17,7 @@ app.get('favourites/:id', (req, res) => {
 
 // add favourite
 app.post('favourites', (req, res) => {
-
+//has to call addfavourite function
 });
 
 // delete favourite
