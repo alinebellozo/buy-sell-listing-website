@@ -26,4 +26,4 @@ const addFavourite = function() {
     .catch((err) => err);
 };
 
-module.exports = { addFavourite };
+module.exports = { getAllFavourites, addFavourite };
