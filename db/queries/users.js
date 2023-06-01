@@ -1,30 +1,31 @@
 const db = require('../connection');
 
-const getUserWithEmail = () => {
-  const values = [user.email];
+const getUserWithEmail = (email) => {
+  const values = [email];
   return db.query(`SELECT *
   FROM users
-  WHERE email = $1;`)
+  WHERE email = $1;`, values)
     .then(data => {
       return data.rows;
     });
 };
 
-const getUserWithId = () => {
-  const values = [user.id];
+const getUserWithId = (id) => {
+  const values = [id];
   return db.query(`SELECT *
   FROM users
-  WHERE id = $1;`)
+  WHERE id = $1;`, values)
     .then(data => {
-      return data.rows;
+      //[0] for retrieving only 1
+      return data.rows[0];
     });
 };
 
-const addUser = () => {
-  const values = [user.name, user.email, user.password];
+const addUser = (name, email, password) => {
+  const values = [name, email, password];
   return db.query(`INSERT INTO users (name, email, password)
   VALUES ($1, $2, $3)
-  RETURNING *`)
+  RETURNING *`, values)
     .then(data => {
       return data.rows;
     });

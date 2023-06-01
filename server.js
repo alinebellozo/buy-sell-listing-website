@@ -39,7 +39,7 @@ app.use(
 // Note: Feel free to replace the example routes below with your own
 const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
-//const usersRoutes = require('./routes/users');
+const usersRoutes = require('./routes/users');
 const sellerRoutes = require('./routes/sellers');
 
 // Mount all resource routes
@@ -47,7 +47,7 @@ const sellerRoutes = require('./routes/sellers');
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/users', userApiRoutes);
 app.use('/api/widgets', widgetApiRoutes);
-//app.use('/users', usersRoutes);
+app.use('/users', usersRoutes);
 app.use('/sellers', sellerRoutes);
 // Note: mount other resources here, using the same pattern above
 
