@@ -1,0 +1,49 @@
+.header {
+
+  width: 100vw;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  // &__title {
+
+  // }
+
+  // &__logo {
+
+  // }
+
+  &__logo-image {
+    width: 200px;
+    height: auto;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__icon-img {
+    width: 1.125rem;
+    height: auto;
+  }
+
+  // &__search {
+
+  // }
+
+  // &__user {
+
+  // }
+
+  // &__favourites {
+
+  // }
+
+  // &__cart {
+
+  // }
+
+}

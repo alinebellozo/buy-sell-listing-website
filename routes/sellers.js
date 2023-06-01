@@ -1,5 +1,8 @@
 const express = require('express');
 const router  = express.Router();
+const cookieParser = require("cookie-parser");
+const cookieSession = require("cookie-session");
+const sellerQuery = require("../db/queries/sellers")
 
 router.get('/', (req, res) => {
   res.render('sellers');
@@ -7,34 +10,38 @@ router.get('/', (req, res) => {
 
 
 //login sellers
-app.get('/login/:id', (req, res) => {
+router.get('/login/:id', (req, res) => {
   // using encrypted cookies
-  req.session.buyer_id = req.params.id;
-
-  // or using plain-text cookies
-  res.cookie('seller_id', req.params.id);
-
+  req.session.seller_id = req.params.id;
   // send the user somewhere
   res.redirect('/');
 });
 
 // get a certain seller profile
-app.get('sellers/:id', (req, res) => {
-
+router.get('/:id', (req, res) => {
+  sellerQuery.getSellerById(req.params.id)
+  .then((seller) => {
+    res.render("sellers", { seller } )
+  })
 });
 
 // edit a seller profile
-app.post('sellers/:id/edit', (req, res) => {
+router.post('/:id/edit', (req, res) => {
 
 });
 
+
+router.post('/login/:id', (req,res) => {
+//getting email pass from req.
+//
+});
 // add a seller
-app.post('sellers', (req, res) => {
+router.post('/', (req, res) => {
 
 });
 
 // delete a seller
-app.post('sellers/:id/delete', (req, res) => {
+router.post('/:id/delete', (req, res) => {
 
 });
 

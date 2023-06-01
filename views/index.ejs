@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Home Page</title>
+  <head>
+    <title>Mugnificent</title>
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
 
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/app.js"></script>
-</head>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
 
-<body>
-  <h1>Have fun! 🥔</h1>
-</body>
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
+  </head>
+
+  <body>
+    <%- include('./partials/_header') %>
+    <h2>Welcome to the universe of mugs!</h2>
+
+    <span class="homepage__filter">Filter by</span>
+
+    <section class="homepage">
+
+      <div class="homepage__categories">
+        <a class="homepage__mugs" href="">
+        <h3 class="homepage__category">Best Sellers</h3>
+        <img class="homepage__mug-image" src="../images/basic-white4.jpg" alt="Mug image">
+        </a>
+
+        <a class="homepage__mugs" href="">
+        <h3 class="homepage__category">New Arrivals</h3>
+        <img class="homepage__mug-image" src="../images/dirty-white.jpg" alt="Mug image">
+        </a>
+
+        <a class="homepage__mugs" href="">
+        <h3 class="homepage__category">All Products</h3>
+        <img class="homepage__mug-image" src="../images/keyboard.jpg" alt="Mug image">
+        </a>
+
+        <a class="homepage__mugs" href="">
+        <h3 class="homepage__category">Sale</h3>
+        <img class="homepage__mug-image" src="../images/red-black-spots.jpg" alt="Mug image">
+        </a>
+      </div>
+
+    </section>
+
+    <%- include('./partials/_footer') %>
+  </body>
 
 </html>

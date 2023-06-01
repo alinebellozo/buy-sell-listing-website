@@ -1,33 +1,32 @@
 const express = require('express');
 const router  = express.Router();
 
+//browse all mugs
 router.get('/', (req, res) => {
   res.render('mugs');
 });
 
 
-// browse all mugs
-app.get('mugs', (req, res) => {
-
-});
-
 // get certain mug
-app.get('mugs/:id', (req, res) => {
+router.get('/:id', (req, res) => {
 
 });
+
+
+
 
 // edit mug
-app.post('mugs/:id/edit', (req, res) => {
+router.post('/:id/edit', (req, res) => {
 
 });
 
 // add mug
-app.post('mugs', (req, res) => {
+router.post('/', (req, res) => {
 
 });
 
 // delete mug
-app.post('mugs/:id/delete', (req, res) => {
+router.post('/:id/delete', (req, res) => {
 
 });
 

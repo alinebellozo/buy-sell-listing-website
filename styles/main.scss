@@ -16,3 +16,28 @@ body {
     rgba(163, 208, 219, 1) 100%
   );
 }
+
+.homepage {
+
+  // &__filter {
+  //   text-align: right;
+  // }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mugs {
+    text-decoration: none;
+  }
+
+  &__category {
+    text-align: center;
+  }
+
+  &__mug-image {
+    width: 15rem;
+    height: auto;
+  }
+}
