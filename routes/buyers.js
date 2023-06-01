@@ -22,7 +22,7 @@ router.use(cookieParser());
 // routes
 
 router.get('/', (req, res) => {
-  res.render('/buyers');
+  res.send('hello');
 });
 
 
