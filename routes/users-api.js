@@ -7,7 +7,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const userQueries = require('../db/queries/buyers');
+const userQueries = require('../db/queries/users');
 
 router.get('/', (req, res) => {
   userQueries.getUsers()
@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
 // Fake a user login
   router.get("/login/:id", (req, res) => {
     // using encrypted cookies
-    req.session.buyer_id = req.params.id;
+    req.session.user_id = req.params.id;
 
     // send the user somewhere
     res.redirect("/");
