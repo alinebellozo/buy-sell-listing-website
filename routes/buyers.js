@@ -8,7 +8,6 @@
 const express = require('express');
 const router  = express.Router();
 const cookieParser = require("cookie-parser");
-const cookieSession = require("cookie-session");
 const bcrypt = require("bcrypt");
 //const { users, widgets } = require("../db/seeds");
 //const users = require("../db/seeds/01_users.sql");
@@ -19,14 +18,6 @@ const bcrypt = require("bcrypt");
 
 router.use(express.urlencoded({ extended: true }));
 router.use(cookieParser());
-router.use(
-  cookieSession({
-    name: "session",
-    keys: ["secretkey"],
-    //expires after 24 hrs
-    maxAge: 24 * 60 * 60 * 1000
-  })
-);
 
 // routes
 
@@ -39,9 +30,6 @@ router.get('/', (req, res) => {
 router.get('/login/:id', (req, res) => {
   // using encrypted cookies
   req.session.buyer_id = req.params.id;
-
-  // or using plain-text cookies
-  res.cookie('buyer_id', req.params.id);
 
   // send the user somewhere
   res.redirect('/');
