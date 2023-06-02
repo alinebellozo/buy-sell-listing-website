@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
   const templateVars = {
     mugs: mugs
   }
-  console.log(mugs)
   res.render('mugs');
   })
 });
@@ -21,7 +20,6 @@ getMugById(req.params.id)
   const templateVars = {
     mug: mug
   }
-  console.log(mug)
   res.render("mug", templateVars)
  })
 });
