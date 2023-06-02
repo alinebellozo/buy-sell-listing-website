@@ -1,15 +1,28 @@
 const express = require('express');
 const router  = express.Router();
-const { getMugById, getAllMugs } = require("../db/queries/mugs");
+const { getMugById, getAllMugsASC, getAllMugsDESC } = require("../db/queries/mugs");
 
-//browse all mugs
+//browse all mugs ASC
 router.get('/', (req, res) => {
-  getAllMugs(req.params.id)
+  getAllMugsASC()
 .then((mugs) => {
+  console.log(mugs)
   const templateVars = {
-    mugs: mugs
+    mugs
   }
-  res.render('mugs');
+  res.render('mugs', templateVars);
+  })
+});
+
+//DESC
+router.get('/', (req, res) => {
+  getAllMugsDESC()
+.then((mugs) => {
+  console.log(mugs)
+  const templateVars = {
+    mugs
+  }
+  res.render('mugs', templateVars);
   })
 });
 
