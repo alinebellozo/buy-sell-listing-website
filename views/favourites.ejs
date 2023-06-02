@@ -7,21 +7,39 @@
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
     <link rel="stylesheet" href="/vendor/border-box.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
 
     <title>Mugnificent</title>
   </head>
 
   <body>
-    <!-- <%- include('./partials/_header') %> -->
+     <%- include('./partials/_header') %>
 
-    <h1><% for (let favourite of favourites){ %>
+    <!--  I hardcoded the mugs info to have an ideia of what the layout looks like. Please replace it with dynamic info (and if something goes wrong when showing more than one product, please let me know) -->
+
+    <!-- <h1><% for (let favourite of favourites){ %>
       <%= favourite.mug_id %>
-    
-    <% } %>
-    </h1>
 
-    <!-- <%- include('./partials/_footer') %> -->
+    <% } %> -->
+    <!-- </h1> -->
+  <section class="favourites">
+    <h1 class="favourites__title"> My favourites</h1>
+    <div class="favourites__container">
+    <img class="favourites__image" src="../images/hearts.jpg" alt="">
+    <div class="favourites__name-icon">
+      <span class="favourites__price">$10.00</span>
+      <div class="favourites__name-container">
+        <h3 class="favourites__name">Mug name</h3>
+      </div>
+
+
+      <div class="favourites__favourite">
+        <img class="favourites__fav-icon" src="../icons/favourite.svg" alt="Favourite">
+      </div>
+    </div>
+  </section>
+
+    <%- include('./partials/_footer') %>
   </body>
 </html>

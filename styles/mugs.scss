@@ -1,58 +1,76 @@
 @use "./partials/fonts" as *;
 @use "./partials/colors" as *;
 
+
 .mugs {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+  width: 100vw;
 
-  // &__filter-container {
-  //   display: flex;
-  // }
+  &__filter-container {
+    display: flex;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5rem;
+  }
 
-  // &__filter-container > input:checked {
-  //   &__filter {
-  //     background: #bcbcbc;
-  //     border: 1px solid transparent;
-  //   }
+  &__filter {
+    font-size: 1.2rem;
+  }
 
-  //   &__filter > div.options {
-  //     display: flex;
-  //     top: 100%;
-  //     padding: 0.5em;
-  //     background: #bcbcbc;
-  //     left: -1px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21%;
+    margin-left: 5rem;
+  }
 
-  //     div {
-  //       padding: 0em 0.5em;
-  //     }
 
-  //     div+div {
-  //       border-left: 1px solid #7d7d7d;
-  //     }
-  //   }
-  // }
+  &__image {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: .625rem;
 
-  // &__filter {
-  //   border: 1px solid #7d7d7d;
-  //   padding: 0.5em 0.7em;
-  //   cursor: pointer;
-  //   position: relative;
-  //   background: #bcbcbc;
-  //   border: 1px solid transparent;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+}
 
-  //   &:hover {
-  //     background: #bcbcbc;
-  //   }
-  // }
+  &__name-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+  }
 
-  // &__options {
-  //   position: absolute;
-  //   display: none;
-  //   z-index: 2;
-  //   top: 100%;
-  //   border-radius: 3px;
-  // }
+  &__price {
+    font-size: 1.2rem;
+    border: 5px dotted $Border-price;
+    border-radius: 15px;
+    background-color: $Background-price;
+  }
 
+  &__name-container {
+    width: 70%;
+    text-align: right;
+  }
+
+  &__name {
+    margin: 0.3rem 0;
+  }
+
+  &__favourite {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  &__fav-icon {
+    width: 1.75rem;
+    height: auto;
+  }
 }

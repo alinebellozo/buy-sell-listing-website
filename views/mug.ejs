@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
     <link rel="stylesheet" href="/vendor/border-box.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
 
     <title>Mugnificent</title>
@@ -16,12 +16,25 @@
   <body>
     <%- include('./partials/_header') %>
 
+    <!--  I hardcoded the mugs info to have an ideia of what the layout looks like. Please replace it with dynamic info -->
+
+
     <section class="mug">
       <div class="mug__container">
 
         <div class="mug__name-img">
           <h1 class="mug__name"><%= mug.name %></h1>
-          <img class="mug__image" src="../images/hearts-set.jpg" alt="">
+          <div class="mug__img-container">
+            <img class="mug__image" src="../images/hearts-set.jpg" alt="">
+          </div>
+
+          <div class="mug__info">
+            <span class="mug__price"><%= mug.price %></span>
+
+            <div class="mug__favourite">
+              <img class="mug__fav-icon" src="../icons/favourite.svg" alt="Favourite">
+            </div>
+          </div>
 
         </div>
 

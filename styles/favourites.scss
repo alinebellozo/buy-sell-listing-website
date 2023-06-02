@@ -1,2 +1,66 @@
 @use "./partials/fonts" as *;
 @use "./partials/colors" as *;
+
+.favourites {
+  height: 100vh;
+  width: 100vw;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21%;
+    margin-left: 5rem;
+  }
+
+
+  &__image {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: .625rem;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__name-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  &__price {
+    font-size: 1.2rem;
+    border: 5px dotted $Border-price;
+    border-radius: 15px;
+    background-color: $Background-price;
+  }
+
+  &__name-container {
+    width: 70%;
+    text-align: right;
+  }
+
+  &__name {
+    margin: 0.3rem 0;
+  }
+
+  &__favourite {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  &__fav-icon {
+    width: 1.75rem;
+    height: auto;
+  }
+}

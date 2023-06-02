@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
     <link rel="stylesheet" href="/vendor/border-box.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
 
     <title>Mugnificent</title>
@@ -17,32 +17,53 @@
   <body>
     <%- include('./partials/_header') %>
 
-    <!-- <div class="mugs">
-      <div class="mugs__filter-container">
-        <input id="filter" type="checkbox">
-        <label class="mugs__filter" for="filter">
-          Filter by:
-          <div class="mugs__options">
-            <select>
-              <option>Select...</option>
-              <option>Price: low to high</option>
-              <option>Price: high to low</option>
-              <option>Featured</option>
-              <option>Alphabetically: A to Z</option>
-              <option>Alphabetically: Z to A</option>
-            </select>
+    <section>
+
+      <div class="mugs">
+        <div class="mugs__filter-container">
+          <label class="mugs__filter" for="filter">
+            Filter by:
+            <div class="mugs__options">
+              <select class="mugs__">
+                <option class="mugs__option">Select...</option>
+                <option class="mugs__option">Price: low to high</option>
+                <option class="mugs__option">Price: high to low</option>
+                <option class="mugs__option">Featured</option>
+                <option class="mugs__option">Alphabetically: A to Z</option>
+                <option class="mugs__option">Alphabetically: Z to A</option>
+              </select>
+            </div>
+          </label>
+        </div>
+
+
+      <!-- <h2><% for (let mug of mugs){ %>
+        <%= mug.name %></h2>
+
+        <img src= "<%= mug.image%>" alt="Mug image">
+
+      <% } %> -->
+
+      <!--  I hardcoded the mugs info to have an ideia of what the layout looks like. Please replace it with dynamic info (and if something goes wrong when showing more than one product, please let me know) -->
+
+        <div class="mugs__container">
+          <img class="mugs__image" src="../images/hearts.jpg" alt="">
+          <div class="mugs__name-icon">
+            <span class="mugs__price">$10.00</span>
+            <div class="mugs__name-container">
+              <h3 class="mugs__name">Mug name</h3>
+            </div>
+
+
+            <div class="mugs__favourite">
+              <img class="mugs__fav-icon" src="../icons/favourite.svg" alt="Favourite">
+            </div>
           </div>
-        </label>
+
+        </div>
       </div>
-    </div> -->
 
-    <h1><% for (let mug of mugs){ %>
-      <%= mug.name %>
-      <%= mug.id %>
-      <img src= "<%= mug.image%>" alt="">
-    <% } %>
-    </h1>
-
+  </section>
 
     <%- include('./partials/_footer') %>
   </body>
