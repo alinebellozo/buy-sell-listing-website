@@ -12,15 +12,7 @@ const getMugById = (id) => {
     });
 };
 
-const getAllMugs = () => {
-  return db.query(`SELECT *
-  FROM mugs;`)
-    .then(data => {
-      return data.rows;
-    });
-};
-
-const filterByPriceASC = () => {
+const getAllMugsASC = () => {
   return db.query(`SELECT *
   FROM mugs
   ORDER BY price ASC;`)
@@ -29,7 +21,7 @@ const filterByPriceASC = () => {
     });
 };
 
-const filterByPriceDESC = () => {
+const getAllMugsDESC = () => {
   return db.query(`SELECT *
   FROM mugs
   ORDER BY price DESC;`)
@@ -38,4 +30,5 @@ const filterByPriceDESC = () => {
     });
 };
 
-module.exports = { getAllMugs, filterByPriceASC, filterByPriceDESC, getMugById };
+
+module.exports = { getAllMugsASC, getAllMugsDESC, getMugById };
