@@ -36,22 +36,14 @@
           </label>
         </div>
 
-
-      <!-- <h2><% for (let mug of mugs){ %>
-        <%= mug.name %></h2>
-
-        <img src= "<%= mug.image%>" alt="Mug image">
-
-      <% } %> -->
-
-      <!--  I hardcoded the mugs info to have an ideia of what the layout looks like. Please replace it with dynamic info (and if something goes wrong when showing more than one product, please let me know) -->
-
+      <div class="mugs__box">
+        <% for (let mug of mugs){ %>
         <div class="mugs__container">
-          <img class="mugs__image" src="../images/hearts.jpg" alt="">
+          <img class="mugs__image" src="<%= mug.image%>" alt="">
           <div class="mugs__name-icon">
-            <span class="mugs__price">$10.00</span>
+            <span class="mugs__price">$<%= mug.price%></span>
             <div class="mugs__name-container">
-              <h3 class="mugs__name">Mug name</h3>
+              <h3 class="mugs__name"><%= mug.name%></h3>
             </div>
 
 
@@ -59,10 +51,9 @@
               <img class="mugs__fav-icon" src="../icons/favourite.svg" alt="Favourite">
             </div>
           </div>
-
         </div>
+        <%} %>
       </div>
-
   </section>
 
     <%- include('./partials/_footer') %>

@@ -25,12 +25,13 @@
     <!-- </h1> -->
   <section class="favourites">
     <h1 class="favourites__title"> My favourites</h1>
+    <% for (let favourite of favourites){ %>
     <div class="favourites__container">
-    <img class="favourites__image" src="../images/hearts.jpg" alt="">
+    <img class="favourites__image" src="<%= favourite.image%>" alt="">
     <div class="favourites__name-icon">
-      <span class="favourites__price">$10.00</span>
+      <span class="favourites__price"><%= favourite.price%></span>
       <div class="favourites__name-container">
-        <h3 class="favourites__name">Mug name</h3>
+        <h3 class="favourites__name"><%= favourite.name%></h3>
       </div>
 
 
@@ -38,6 +39,7 @@
         <img class="favourites__fav-icon" src="../icons/favourite.svg" alt="Favourite">
       </div>
     </div>
+   <% } %>
   </section>
 
     <%- include('./partials/_footer') %>
