@@ -46,7 +46,6 @@ getUserWithId(req.params.id)
   const templateVars = {
     user: user
   }
-  console.log(user)
   res.render("user", templateVars)
  })
 });
