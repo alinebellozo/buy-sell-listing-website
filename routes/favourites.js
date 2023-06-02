@@ -1,11 +1,19 @@
 const express = require('express');
 const router  = express.Router();
+const { getAllFavourites } = require("../db/queries/favourites");
 
 router.get('/', (req, res) => {
-  res.render('favourites');
+  getAllFavourites(req.params.id)
+.then((favourites) => {
+  console.log(favourites)
+  const templateVars = {
+    favourites: favourites
+  }
+  res.render('favourites', templateVars);
+  })
 });
 
-// browse all favourites
+/*// browse all favourites
 app.get('favourites', (req, res) => {
 
 });
@@ -23,6 +31,6 @@ app.post('favourites', (req, res) => {
 // delete favourite
 app.post('favourites/:id/delete', (req, res) => {
 
-});
+});*/
 
 module.exports = router;

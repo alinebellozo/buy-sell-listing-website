@@ -6,10 +6,11 @@ const { getMugById, getAllMugs } = require("../db/queries/mugs");
 router.get('/', (req, res) => {
   getAllMugs(req.params.id)
 .then((mugs) => {
+  console.log(mugs)
   const templateVars = {
     mugs: mugs
   }
-  res.render('mugs');
+  res.render('mugs', templateVars);
   })
 });
 
