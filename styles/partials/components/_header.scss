@@ -1,11 +1,16 @@
+@use "../fonts" as *;
+@use "../colors" as *;
+
 .header {
 
   width: 100vw;
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem 5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  background-color: $Background-footer-header;
 
   // &__title {
 
@@ -23,11 +28,16 @@
   &__icons {
     display: flex;
     flex-direction: row;
+    gap: .875rem;
   }
 
   &__icon-img {
-    width: 1.125rem;
+    width: 1.75rem;
     height: auto;
+
+    &:hover {
+        cursor: pointer;
+      }
   }
 
   // &__search {

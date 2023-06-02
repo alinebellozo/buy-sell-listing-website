@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
 
-  <title>Mugnificent</title>
-</head>
-<body>
-  <!-- <%- include('./partials/_footer') %> -->
+    <title>Mugnificent</title>
+  </head>
 
-  <h1>This is my mug</h1>
-  <%= mug.name %>
-  <a href="mailto:warren.uhrich@lighthouselabs.com?subject=I want to buy!&cc=dom@lighthouselabs.com&replyto=dom@lighthouselabs.com&body=I want to buy these shoes, they look awesome! Let me know if they're available, thanks!">Click here to Message Seller</a>
+  <body>
+    <%- include('./partials/_header') %>
 
-  <!-- <%- include('./partials/_header') %> -->
-</body>
+    <section class="mug">
+      <div class="mug__container">
+
+        <div class="mug__name-img">
+          <h1 class="mug__name"><%= mug.name %></h1>
+          <img class="mug__image" src="../images/hearts-set.jpg" alt="">
+
+        </div>
+
+        <span class="mug__description">Oh, let me introduce you to this awesome mug! Picture it: a quirky, vibrant burst of personality sitting on your
+        countertop. This mug is like your best friend who's always ready to lift your spirits. With a playful design that makes you grin, it's practically begging to be filled with your favorite brew.
+        </br>
+        Its handle? Well, it's like a hug for your hand, ensuring a secure grip and preventing any accidental coffee
+        catastrophes. And let's not forget about its magical powers. Yep, this mug has the uncanny ability to turn even the gloomiest mornings into a burst of caffeinated delight!
+        </br>
+        So go ahead, grab this mug and let it bring a touch of whimsy to your day. Whether you're sipping hot cocoa, fueling up
+        with coffee, or steeping some tea, this mug is your trusty sidekick, making every drink an adventure. Cheers to this
+        little piece of joy that never fails to put a smile on your face!</span>
+
+      </div>
+
+
+      <div class="mug__msg-container">
+
+        <span class="mug__question">Any questions about this product?</span>
+
+        <a class="mug__message" href="mailto:warren.uhrich@lighthouselabs.com?subject=I want to buy!&cc=dom@lighthouselabs.com&replyto=dom@lighthouselabs.com&body=I want to buy this mug, it looks awesome! Let me know if they're available, thanks!" target="_blank"><img class="mug__msg-icon" src="../icons/message.svg" alt="Message icon"> Click here to message the seller!<img class="mug__msg-icon" src="../icons/message.svg" alt="Message icon"></a>
+
+      </div>
+    </section>
+
+    <%- include('./partials/_footer') %>
+  </body>
 </html>

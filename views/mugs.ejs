@@ -15,22 +15,36 @@
   </head>
 
   <body>
-    <!-- <%- include('./partials/_header') %>  -->
+    <%- include('./partials/_header') %>
+
+    <!-- <div class="mugs">
+      <div class="mugs__filter-container">
+        <input id="filter" type="checkbox">
+        <label class="mugs__filter" for="filter">
+          Filter by:
+          <div class="mugs__options">
+            <select>
+              <option>Select...</option>
+              <option>Price: low to high</option>
+              <option>Price: high to low</option>
+              <option>Featured</option>
+              <option>Alphabetically: A to Z</option>
+              <option>Alphabetically: Z to A</option>
+            </select>
+          </div>
+        </label>
+      </div>
+    </div> -->
 
     <h1><% for (let mug of mugs){ %>
       <%= mug.name %>
       <%= mug.id %>
-      <img src= "<%= mug.image%>"> 
+      <img src= "<%= mug.image%>" alt="">
     <% } %>
     </h1>
 
-<<<<<<< HEAD
-    <button>Filter</button>
 
     <%- include('./partials/_footer') %>
-=======
-    <!-- <%- include('./partials/_footer') %> -->
->>>>>>> 4935dd11fc7f18c99fa2288a395b9bfae2d49326
   </body>
 
 </html>

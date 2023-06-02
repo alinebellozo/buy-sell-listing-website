@@ -1,0 +1,58 @@
+@use "./partials/fonts" as *;
+@use "./partials/colors" as *;
+
+.mugs {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // &__filter-container {
+  //   display: flex;
+  // }
+
+  // &__filter-container > input:checked {
+  //   &__filter {
+  //     background: #bcbcbc;
+  //     border: 1px solid transparent;
+  //   }
+
+  //   &__filter > div.options {
+  //     display: flex;
+  //     top: 100%;
+  //     padding: 0.5em;
+  //     background: #bcbcbc;
+  //     left: -1px;
+
+  //     div {
+  //       padding: 0em 0.5em;
+  //     }
+
+  //     div+div {
+  //       border-left: 1px solid #7d7d7d;
+  //     }
+  //   }
+  // }
+
+  // &__filter {
+  //   border: 1px solid #7d7d7d;
+  //   padding: 0.5em 0.7em;
+  //   cursor: pointer;
+  //   position: relative;
+  //   background: #bcbcbc;
+  //   border: 1px solid transparent;
+
+  //   &:hover {
+  //     background: #bcbcbc;
+  //   }
+  // }
+
+  // &__options {
+  //   position: absolute;
+  //   display: none;
+  //   z-index: 2;
+  //   top: 100%;
+  //   border-radius: 3px;
+  // }
+
+}

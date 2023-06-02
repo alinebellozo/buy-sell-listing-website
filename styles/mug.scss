@@ -1,0 +1,73 @@
+@use "./partials/fonts" as *;
+@use "./partials/colors" as *;
+
+.mug {
+
+  margin: 2rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 2rem;
+    border-style: groove;
+    border-radius: 1.5rem;
+
+  }
+
+  // &__name-img {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__image {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: .625rem;
+    box-shadow: 10px 10px 5px black;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+  }
+
+  &__description {
+    margin: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  &__msg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    font-size: 1.3rem;
+  }
+
+  // &__question {
+
+  // }
+
+  &__message {
+    text-decoration: none;
+    color: $Message-text;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+  }
+
+  &__msg-icon {
+    width: 1.8rem;
+    height: auto;
+  }
+}
