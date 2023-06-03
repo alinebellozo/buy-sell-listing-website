@@ -38,7 +38,8 @@
       <div class="mugs__box">
         <% for (let mug of mugs){ %>
         <div class="mugs__container">
-          <img class="mugs__image" src="<%= mug.image%>" alt="">
+          <% console.log(mug.id) %>
+          <a href="/mugs/1" > <img class="mugs__image" src="<%= mug.image%>" alt=""></a>
           <div class="mugs__name-icon">
             <span class="mugs__price">$<%= mug.price%></span>
             <div class="mugs__name-container">
@@ -48,6 +49,7 @@
 
             <div class="mugs__favourite">
               <img class="mugs__fav-icon" src="../icons/favourite.svg" alt="Favourite">
+
             </div>
           </div>
         </div>
