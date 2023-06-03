@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/vendor/border-box.css" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
 
     <title>Mugnificent</title>
   </head>
@@ -24,13 +26,10 @@
           <label class="mugs__filter" for="filter">
             Filter by:
             <div class="mugs__options">
-              <select class="mugs__">
-                <option class="mugs__option">Select...</option>
-                <option class="mugs__option">Price: low to high</option>
-                <option class="mugs__option">Price: high to low</option>
-                <option class="mugs__option">Featured</option>
-                <option class="mugs__option">Alphabetically: A to Z</option>
-                <option class="mugs__option">Alphabetically: Z to A</option>
+              <select id="mugFilter" class="mugs__">
+                <option class="mugs__option" value="/mugs">Select...</option>
+                <option class="mugs__option" value="/mugs/asc">Price: low to high</option>
+                <option class="mugs__option" value="/mugs/desc">Price: high to low</option>
               </select>
             </div>
           </label>

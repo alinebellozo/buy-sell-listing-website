@@ -12,6 +12,14 @@ const getMugById = (id) => {
     });
 };
 
+const getAllMugs = () => {
+  return db.query(`SELECT *
+  FROM mugs;`)
+    .then(data => {
+      return data.rows;
+    });
+};
+
 const getAllMugsASC = () => {
   return db.query(`SELECT *
   FROM mugs
@@ -31,4 +39,4 @@ const getAllMugsDESC = () => {
 };
 
 
-module.exports = { getAllMugsASC, getAllMugsDESC, getMugById };
+module.exports = { getAllMugsASC, getAllMugsDESC, getAllMugs, getMugById };
